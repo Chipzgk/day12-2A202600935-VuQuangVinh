@@ -46,7 +46,7 @@ services:
     name: agent-cache
     plan: free
     maxmemoryPolicy: allkeys-lru
-    ipAllowList:
+    ipAllowList: []
 
 # ============================================================
 # Cách deploy:
