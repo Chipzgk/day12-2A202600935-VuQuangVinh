@@ -1,0 +1,15 @@
+[build]
+dockerfile = "Dockerfile"
+
+[deploy]
+# Bỏ hoàn toàn dòng startCommand để Railway bắt buộc phải đọc CMD từ Dockerfile
+healthcheckPath = "/health"
+healthcheckTimeout = 30
+
+[env]
+# Xóa dòng PORT = "8000" để Railway tự động cấp phát port động theo cơ chế của họ
+ENVIRONMENT = "production"
+APP_NAME = "Production AI Agent"
+LOG_LEVEL = "INFO"
+RATE_LIMIT_PER_MINUTE = "20"
+DAILY_BUDGET_USD = "5.0"
